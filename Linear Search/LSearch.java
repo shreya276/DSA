@@ -1,21 +1,20 @@
-import java.util.*;
-public class Maxin2D {
-    public static void main(String[] args) {
-        int arr[][]={
-            {1,2,3},{4,5,6},{7,8,9}
+// search from 1st index to last index one by one
+class LSearch{
+    static int linearSearch(int arr[], int target){
+        if(arr.length==0){
+            return -1;
+        }
+        for(int i=0;i<arr.length;i++){   
+            if(arr[i]==target){
+                return i;
+            }
         };
-        System.out.println(maxArr(arr));
+        return -1;
         
     }
-    static int maxArr(int[][] arr){
-        int max=Integer.MIN_VALUE;
-        for(int[] ints:arr){
-            for(int ele:ints){
-                if(ele>max){
-                    max=ele;
-                }
-            }
-        }
-        return max;
+    public static void main(String[] args){
+        int [] arr={1,2,3,54,6,7,89};
+        int target=89;
+        System.out.println(linearSearch(arr, target));
     }
 }
