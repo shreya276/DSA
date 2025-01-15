@@ -1,5 +1,3 @@
-//https://leetcode.com/problems/find-numbers-with-even-number-of-digits/submissions/1509163780/
-
 public class EvenDig {
     public static void main(String[] args) {
     int nums[]={123,43,5677,543};
@@ -16,8 +14,7 @@ public class EvenDig {
         return count;
     }
     static boolean even(int num){
-        // int numOfDigits=digit(num); or
-        int numOfDigits=digitShortcut(num);     // this is optimized way
+        int numOfDigits=digitShortcut(num);
         if(numOfDigits%2==0){
             return true;
         }
@@ -38,9 +35,7 @@ public class EvenDig {
         }
         return count;
     }
-
-
-    // shortcut to find no.of digit, hence optimized way
+    // shortcut to find no.of digit
     static int digitShortcut(int num){
         return (int)(Math.log10(num))+1;
     }
